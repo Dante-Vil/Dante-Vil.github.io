@@ -1,0 +1,171 @@
+/* 
+Author: Dante Villarreal
+Date: 7/23/2021
+*/
+
+/********** Variables **********/
+
+:root {
+  --dark: #171717;
+  --grey: #444444;/*#5f5f5f;*/
+  --red: #DA0037;
+  --light: #EDEDED;
+}
+
+
+/********** Container Styles **********/
+
+body {
+  margin: 0;
+}
+
+.pageContainer {
+  display: flex;
+  flex-flow: column;
+  background-color: var(--dark);
+  color: var(--light);
+  min-height: 100vh;
+  font-size: 1.1em;
+}
+
+.bio {
+  display: flex;
+  margin-top: 5%;
+  color: var(--light);
+  text-align: center;
+}
+
+.pageFiller {
+  flex-grow: 1;
+
+}
+
+.hobbies {
+  flex-grow: 1;
+}
+
+.wyze {
+  display: flex;
+  border: 2px dashed red;
+}
+
+.wyzeDescrip {
+  flex: 1;
+  padding: 1%;
+  padding-left: 2%;
+  border: 1px solid lightgreen;
+}
+
+.wyzePic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid blue;
+  animation: fadein 1.05s 3.1s backwards;
+}
+
+img {
+  width: 350px;
+}
+
+/********** Nav Styles **********/
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--dark);
+  color: var(--grey)
+}
+
+.navitems {
+  flex: 1;
+  text-align: center;
+  transition: all 0.3s;
+  padding: 1%;
+  border-radius: 5px;
+  color: var(--grey);
+}
+
+.navitems:hover, .navitems:focus {
+  color: var(--light);
+  animation: navItemsHover 0.25s forwards;
+}
+
+/* made this an animation instead of just putting it on the nav just in case I want to use it somewhere else */
+@keyframes navItemsHover {
+  from {}
+  to {box-shadow: -0.2em 0 0 var(--dark), 0.2em 0 0 var(--dark),0 0.5em 0.5em -0.4em var(--red); transform: translateY(-0.1em);}
+}
+
+a, a:visited {
+  flex: 1;
+  text-decoration: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+a:hover, a:focus, a:active{
+  color: var(--light);
+}
+
+/********** Header Styles **********/
+
+h1 {
+  margin-top: 8%;
+  margin-bottom: 7%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  animation: fadein 1.2s 0.4s backwards, fadeInDown 1.1s 0.4s; 
+  /*animation: fadein 1.2s 0.3s backwards;*/ /* this makes the h1 have the style set by the first keyframe in fadeinh1 before the animation starts so I don't have to make the h1 have an opacity of 0 */
+  font-weight: 550; 
+}
+
+@keyframes fadein {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+h2 {
+  text-align: center;
+  color: var(--red);
+  animation: fadein 1.05s 1.4s backwards; /* same as the h1 */
+}
+
+.wyzeh2 {
+  text-align: left;
+  animation: fadein 2.5s 1.5s backwards, slideInLeft 1.3s 1.3s;
+}
+
+/********** Paragraph Styles **********/
+
+.bioText {
+  padding: 0 14%;
+  padding-top: 5%;
+  animation: fadein 1.2s 2.1s backwards, fadeInUp 1.15s 2s;
+}
+
+.wyzeText {
+  padding-top: 3%;
+  animation: fadein 1.05s 3.1s backwards;
+}
+
+/********** Footer Styles **********/
+
+footer {
+  text-align: center;
+  font-size: x-small;
+  background-color: var(--grey);
+  padding: 1%;
+  margin-top: 2%;
+}
+
+/***********************************/
+/********** Media Queries **********/
+/***********************************/
+
+@media screen and (min-width: 1500px) {
+  .bioText {
+    padding: 0 24%;
+  }
+}
