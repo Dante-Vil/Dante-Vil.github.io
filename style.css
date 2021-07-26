@@ -46,27 +46,78 @@ body {
 
 .wyze {
   display: flex;
-  border: 2px dashed red;
+  margin-bottom: 3%;
 }
 
 .wyzeDescrip {
   flex: 1;
   padding: 1%;
   padding-left: 2%;
-  border: 1px solid lightgreen;
+  padding-right: 0;
 }
 
 .wyzePic {
   flex: 1;
   display: flex;
   justify-content: center;
-  padding: 0;
-  border: 1px solid blue;
-  animation: fadein 1.05s 3.1s backwards;
+  padding-right: 1%;
+  animation: fadein 1.05s 2.25s backwards;
+  padding-left: 0;
 }
 
 img {
-  width: 350px;
+  width: 300px;
+}
+
+.piano {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.pianoDescrip {
+  flex: 1;
+  padding: 1%;
+  padding-right: 2%;
+  padding-left: 5%;
+  padding-top: 5.5%;
+}
+
+.pianoPic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0.5%;
+  animation: fadein 1.05s 2.25s backwards;
+}
+
+.workout {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.workoutDescrip {
+  flex: 1;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 0;
+  text-align: center;
+}
+
+.workoutPic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadein 1.05s 2.25s backwards;
+}
+
+
+
+.projectContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding-right: 25%;
+  padding-left: 25%;
 }
 
 /********** Nav Styles **********/
@@ -88,25 +139,19 @@ img {
 }
 
 .navitems:hover, .navitems:focus {
+  outline: none;
   color: var(--light);
   animation: navItemsHover 0.25s forwards;
+}
+
+.navitems:active {
+  transform: scale(.95);
 }
 
 /* made this an animation instead of just putting it on the nav just in case I want to use it somewhere else */
 @keyframes navItemsHover {
   from {}
   to {box-shadow: -0.2em 0 0 var(--dark), 0.2em 0 0 var(--dark),0 0.5em 0.5em -0.4em var(--red); transform: translateY(-0.1em);}
-}
-
-a, a:visited {
-  flex: 1;
-  text-decoration: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-a:hover, a:focus, a:active{
-  color: var(--light);
 }
 
 /********** Header Styles **********/
@@ -133,8 +178,65 @@ h2 {
 }
 
 .wyzeh2 {
-  text-align: left;
-  animation: fadein 2.5s 1.5s backwards, slideInLeft 1.3s 1.3s;
+  text-align: center;
+  animation: fadein 2.1s 1.5s backwards, slideInLeft 1s 1.25s;
+}
+
+.pianoh2 {
+  text-align: center;
+  animation: fadein 2.1s 1.5s backwards, slideInRight 1s 1.25s;
+}
+
+.workouth2 {
+  animation: fadein 2.1s 1.5s backwards, slideInLeft 1s 1.25s;
+}
+
+.projectsh2 {
+  margin-bottom: 10%;
+}
+
+/********** Link Styles **********/
+
+a, a:visited {
+  flex: 1;
+  text-decoration: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+a:hover, a:focus, a:active{
+  color: var(--light);
+}
+
+.projectLinks {
+  padding: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-bottom: 8%;
+  border-radius: 15px;
+  background-color: var(--grey);
+  color: var(--dark);
+  text-align: center;
+  flex: 0.7;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease 0s;
+  cursor: pointer;
+  outline: none;
+  align-self: center;
+  width: 55%;
+  animation: fadein 1.05s 2.4s backwards, fadeInUp 1.1s 2.4s;
+}
+
+.projectLinks:hover, .projectLinks:focus {
+  background-color: var(--red);
+  box-shadow: 0px 10px 20px rgba(218, 0, 55, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+  filter: brightness(99%);
+}
+
+.projectLinks:active, .projectLinks:focus {
+  transform: scale(.95);
 }
 
 /********** Paragraph Styles **********/
@@ -147,7 +249,18 @@ h2 {
 
 .wyzeText {
   padding-top: 3%;
-  animation: fadein 1.05s 3.1s backwards;
+  text-align: center;
+  animation: fadein 1.05s 2.25s backwards;
+}
+
+.pianoText {
+  text-align: center;
+  animation: fadein 1.05s 2.25s backwards;
+}
+
+.workoutText {
+  text-align: center;
+  animation: fadein 1.05s 2.25s backwards;
 }
 
 /********** Footer Styles **********/
@@ -157,7 +270,7 @@ footer {
   font-size: x-small;
   background-color: var(--grey);
   padding: 1%;
-  margin-top: 2%;
+  margin-top: 8%;
 }
 
 /***********************************/

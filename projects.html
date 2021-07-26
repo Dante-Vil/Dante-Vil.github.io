@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
-  Author: Dante Villarreal
-  Date: 7/23/2021
-  -->
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="style.css">
-  <title>Dante's Bio</title>
+  <title>Dante's Projects</title>
 </head>
 <body>
   <div class="pageContainer">
     <div class="nav">
       <!-- I embedded these styles because it takes the browser a split second to apply them from the linked style sheet which results in the links flashing blue when the page was reloaded or a link was clicked - this fixes that -->
       <style>
-        a, a:visited {
+        .navitems, .navitems:visited {
           flex: 1;
           color: var(--grey);
           text-decoration: none;
           margin-bottom: 0;
-          padding-bottom: 0;
-        }
+          padding-bottom: 0;}
+
+        .navitems:hover, .navitems:focus {
+          outline: none;
+          color: var(--light);
+          animation: navItemsHover 0.25s forwards;}
       </style>
       <a href="index.html" class="navitems">Home</a>
       <a href="hobbies.html" class="navitems">Hobbies</a>
       <a href="projects.html" class="navitems">Projects</a>
     </div>
-
-    <!-- apprently I have to do it with this animation so it doesn't appear on the screen, the go up and dissapear then come back down and reappear... -->
-    <h1>Hello, World!</h1>
-    <h2>I'm Dante.</h2>
-    <div class="bio">
-      <p class="bioText">I'm currently going to OTC and I have a little over a year left until I finish my Gen Eds. In the fall of 2021 I'm going to take Website Development II, C# Programming II, Database and Query, and Trigonometry. For Spring 2022 I have Software Engineering Project, Data Structures, and Analytic Geometry/Calculus I. For my final semeser, Fall 2022, I have Java Programming I and Physics Engrs & Scientists I. After that, I plan on transferring to MSU to finish up my Computer Science degree.
-      </p>
+    <h1>My Projects</h1>
+    <h2 class="projectsh2">Bear in mind they were made a while ago...</h2>
+    <div class="projectContainer">
+      <!-- Had to use more embedded styles because of the first ones I used overriding the ones from the stylesheet... -->
+      <a class="projectLinks" href="https://cis-130-pretty-about-you.villarrealdante.repl.co/"  target="_blank">Pretty About Me (6/21)</a>
+      <a class="projectLinks" href="https://fitforfunfitness.villarrealdante.repl.co/"  target="_blank">Fit For Fun Fitness (6/30/21)</a>
+      <a class="projectLinks" href="https://responsivetravel.villarrealdante.repl.co/" target="_blank">Responsive Travel (7/4/21)</a>
+      <a class="projectLinks" href="https://livebaitshop.villarrealdante.repl.co/" target="_blank">Live Bait Shop (7-17-21)</a>
     </div>
-    <div class="pageFiller"></div>
     <footer>
       &copy; 2021 Dante Villarreal
     </footer>
