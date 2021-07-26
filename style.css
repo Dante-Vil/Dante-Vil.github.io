@@ -282,3 +282,48 @@ footer {
     padding: 0 24%;
   }
 }
+
+@media screen and (min-width: 1120px){
+  .nav {
+    flex-flow: column;
+  }
+
+  .hobbies {
+    flex-flow: column;
+  }
+
+  .wyze {
+    flex-flow: column;
+  }
+  .wyzeText {
+    padding-right: 4%;
+    padding-left: 3%;
+  }
+  .wyzePic {
+    padding-left: 1%;
+    margin-left: 0;
+    padding-right: 2%;
+  }
+
+  .piano {
+    flex-flow: column-reverse;
+    margin-top: 7%;
+  }
+  .pianoText {
+    padding-right: 4%;
+    
+  }
+
+  .workout {
+    flex-flow: column;
+    margin-top: 7%;
+  }
+  .workoutText {
+    padding-right: 4.5%;
+    padding-left: 3%;
+  }
+
+  .projectLinks {
+    width: 85%;
+  }
+}
